@@ -42,6 +42,7 @@ const getChanelIcon = (video_data) => {
             data => {
                 video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
                 makeCard(video_data)
+                // console.log(video_data)
             }
         )
 }
@@ -55,9 +56,10 @@ const makeCard = (data) => {
                     <div class="info">
                         <h3 class="title">${ data.snippet.title }</h3>
                         <p class="chanel-name">${ data.snippet.channelTitle }</p>
+                        <p class="chanel-name">186K views 2 mo ago</p>
                     </div>
                 </div>
-            </div> 
+            </div>
 `
 }
 const searchInput = document.querySelector('.search-bar');
