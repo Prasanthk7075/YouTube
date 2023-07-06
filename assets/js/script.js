@@ -9,57 +9,57 @@ menuIcon.onclick = function () {
     filter_conatiner.classList.toggle("filter-container")
 }
 
-const Card = document.querySelector(".videos-container");
+const Card = document.querySelector(".videos-container")
 
-let api_key = "AIzaSyDWi1ibZg8n8m95xKqbOF67YLIduskdH9s";
-let video_http = " https://www.googleapis.com/youtube/v3/videos?";
-let channel_Url = "https://www.googleapis.com/youtube/v3/channels?";
+const api_key = 'AIzaSyBe2feBz8u38Vpmg3yIfMAUUj8pis9P9q8'
+const product_key = ' https://www.googleapis.com/youtube/v3/videos?'
+const chanel_Url = ' https://www.googleapis.com/youtube/v3/channels?'
 
-fetch(video_http + new URLSearchParams({
+
+
+fetch(product_key + new URLSearchParams({
     key: api_key,
-    part: 'snippet',
-    chart: 'mostPopular',
-    maxResults: 150,
-    regionCode: 'IN'
+    part: "snippet",
+    chart: "mostPopular",
+    maxResults: 100,
+    regionCode: "IN"
 }))
+
     .then(res => res.json())
     .then(data => {
         data.items.forEach(item => {
-            getChannelIcon(item)
-        });
+            getChanelIcon(item)
+        })
     })
-    .catch(err => console.log(err))
 
-const getChannelIcon = (video_data) => {
-    fetch(channel_Url + new URLSearchParams({
+const getChanelIcon = (video_data) => {
+    fetch(chanel_Url + new URLSearchParams({
         key: api_key,
-        part: 'snippet',
+        part: "snippet",
         id: video_data.snippet.channelId
     }))
-        .then(res => res.json())
-        .then(data => {
-            video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
-            makeVideoCard(video_data)
-        })
+        .then(res => res.json()).then(
+            data => {
+                video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
+                makeCard(video_data)
+            }
+        )
 }
 
-const makeVideoCard = (data) => {
+const makeCard = (data) => {
     Card.innerHTML += `
-    <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${ data.id }'">
-        <img src="${ data.snippet.thumbnails.high.url }" class="thumbnail" alt="">
-        <div class="content">
-            <img src="${ data.channelThumbnail }" class="profile" alt="">
-            <div class="info">
-                <h4 class="title">${ data.snippet.title }</h4>
-                <p class="chanel-name">${ data.snippet.channelTitle }</p>
-                 <p class="chanel-name">1.3M views 1 year ago</p>
-            </div>
-        </div>
-    </div>
-    `;
+           <div class="video" onclick="location.href = 'https://youtube.com/watch?v=${ data.id }'">
+                <img src="${ data.snippet.thumbnails.high.url }" class="thumbnail">
+                <div class="content">
+                    <img src="${ data.channelThumbnail }" class="profile">
+                    <div class="info">
+                        <h3 class="title">${ data.snippet.title }</h3>
+                        <p class="chanel-name">${ data.snippet.channelTitle }</p>
+                    </div>
+                </div>
+            </div> 
+`
 }
-
-
 const searchInput = document.querySelector('.search-bar');
 const searchBtn = document.querySelector('.search-btn');
 let searchLink = "https://www.youtube.com/results?search_query=";
@@ -69,4 +69,3 @@ searchBtn.addEventListener('click', () => {
         location.href = searchLink + searchInput.value;
     }
 })
-

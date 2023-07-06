@@ -136,7 +136,7 @@
 
 /* --------------side-bar---------------> */
 .side-bar {
-    min-width: 250px;
+    min-width: 230px;
     width: 15%;
     height: 100%;
     background-color: rgb(255, 255, 255);
@@ -182,7 +182,7 @@ h4 {
 .links:hover {
     background-color: #e7e4e4;
     border-radius: 5px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .separator {
@@ -302,7 +302,7 @@ h4 {
 
 .info {
     position: relative;
-    left: -15px;
+
 }
 
 /* .title {
