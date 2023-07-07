@@ -12,7 +12,7 @@ menuIcon.onclick = function () {
 const Card = document.querySelector(".videos-container")
 
 const api_key = 'AIzaSyBe2feBz8u38Vpmg3yIfMAUUj8pis9P9q8'
-const product_key = ' https://www.googleapis.com/youtube/v3/videos?'
+const product_key = 'https://www.googleapis.com/youtube/v3/videos?'
 const chanel_Url = ' https://www.googleapis.com/youtube/v3/channels?'
 
 
