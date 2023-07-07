@@ -13,24 +13,29 @@ const Card = document.querySelector(".videos-container")
 
 const api_key = 'AIzaSyBe2feBz8u38Vpmg3yIfMAUUj8pis9P9q8'
 const product_key = 'https://www.googleapis.com/youtube/v3/videos?'
-const chanel_Url = ' https://www.googleapis.com/youtube/v3/channels?'
+const chanel_Url = 'https://www.googleapis.com/youtube/v3/channels?'
 
 
 
-fetch(product_key + new URLSearchParams({
-    key: api_key,
-    part: "snippet",
-    chart: "mostPopular",
-    maxResults: 100,
-    regionCode: "IN"
-}))
-
-    .then(res => res.json())
-    .then(data => {
-        data.items.forEach(item => {
-            getChanelIcon(item)
+try {
+    fetch(product_key + new URLSearchParams({
+        key: api_key,
+        part: "snippet",
+        chart: "mostPopular",
+        maxResults: 200,
+        regionCode: "IN"
+    }))
+        .then(res => res.json())
+        .then(data => {
+            data.items.forEach(item => {
+                getChanelIcon(item)
+                console.log(data)
+            })
         })
-    })
+} catch (error) {
+    console.log(error)
+}
+
 
 const getChanelIcon = (video_data) => {
     fetch(chanel_Url + new URLSearchParams({
@@ -56,7 +61,7 @@ const makeCard = (data) => {
                     <div class="info">
                         <h3 class="title">${ data.snippet.title }</h3>
                         <p class="chanel-name">${ data.snippet.channelTitle }</p>
-                        <p class="chanel-name">186K views 2 mo ago</p>
+                        <p class="chanel-name">1.3M views 1 year ago</p>
                     </div>
                 </div>
             </div>
