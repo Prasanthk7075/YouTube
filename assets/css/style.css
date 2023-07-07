@@ -331,7 +331,7 @@ h4 {
 
 @media only screen and (max-width: 1326px) {
     .video {
-        width: 310px;
+        width: 320px;
     }
 
     .title {
@@ -339,13 +339,157 @@ h4 {
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1285px) {
     .video {
         width: 300px;
     }
 
     .search-box input {
         width: 350px;
+    }
+
+    .title {
+        width: 210px;
+    }
+}
+
+@media only screen and (max-width: 1254px) {
+    .video {
+        width: 290px;
+    }
+
+    .search-box input {
+        width: 550px;
+    }
+
+    .title {
+        width: 210px;
+    }
+}
+
+@media only screen and (max-width: 1212px) {
+    .video {
+        width: 280px;
+    }
+
+    .search-box input {
+        width: 450px;
+    }
+
+    .title {
+        width: 210px;
+    }
+}
+
+
+@media only screen and (max-width: 1156px) {
+    .video {
+        width: 260px !important;
+        height: 150px !important;
+    }
+
+    .search-box input {
+        width: 450px;
+    }
+
+    ;
+
+    .title {
+        width: 210px;
+    }
+}
+
+@media only screen and (max-width: 1186px) {
+    .video {
+        width: 270px;
+    }
+
+    .search-box input {
+        width: 550px;
+    }
+
+    .title {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1126px) {
+    .video {
+        width: 250px !important;
+    }
+
+    .search-box input {
+        width: 450px;
+    }
+
+    .title {
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width: 1098px) {
+    .video {
+        width: 240px !important;
+    }
+
+    .search-box input {
+        width: 450px;
+    }
+
+    .title {
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    .video {
+        width: 240px;
+    }
+
+    .search-box input {
+        width: 450px;
+    }
+
+    .title {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1062px) {
+    .video {
+        width: 230px !important;
+    }
+
+    .search-box input {
+        width: 450px;
+    }
+
+    .title {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 1026px) {
+    .video {
+        width: 220px !important;
+    }
+
+    .search-box input {
+        width: 250px;
+    }
+
+    .title {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .video {
+        width: 200px;
+    }
+
+    .search-box input {
+        width: 250px;
     }
 
     .title {
