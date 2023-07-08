@@ -503,11 +503,11 @@ h4 {
     }
 
     .search-box input {
-        width: 170px;
+        width: 150px;
     }
 
     .search-btn {
-        width: 50px;
+        width: 40px;
         margin-right: 10px;
         text-align: center;
     }
@@ -574,13 +574,15 @@ h4 {
     }
 
     .search-box input {
-        width: 170px;
+        width: 168px;
+        font-size: 12px;
     }
 
     .search-btn {
         width: 50px;
         margin-right: 10px;
         text-align: center;
+        font-size: 12px;
     }
 
     .title {
@@ -615,8 +617,8 @@ h4 {
     }
 
     .logo img {
-        width: 80px;
-        height: 20px;
+        width: 70px;
+
     }
 
     .user-options {
