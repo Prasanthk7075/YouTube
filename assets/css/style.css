@@ -527,7 +527,7 @@ h4 {
         position: relative;
         top: 8rem;
         width: 93% !important;
-        left: 0px !important;
+        left: -10px !important;
         padding: 20px;
         overflow-x: hidden;
         z-index: -10 !important;
@@ -568,7 +568,7 @@ h4 {
         width: 100%;
         overflow-x: hidden;
         z-index: -1;
-        top: 30px;
+        top: 45px;
         font-size: 5px
     }
 
