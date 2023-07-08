@@ -2,6 +2,7 @@ var menuIcon = document.querySelector(".menu-icon");
 var sidebar = document.querySelector(".side-bar")
 var conatiner = document.querySelector('.container')
 var filter_conatiner = document.querySelector('.filter')
+var container = document.querySelector(".body")
 
 menuIcon.onclick = function () {
     sidebar.classList.toggle("small-menu")
