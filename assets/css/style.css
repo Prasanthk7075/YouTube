@@ -520,7 +520,7 @@ h4 {
         position: relative;
         top: 8rem;
         width: 93% !important;
-        left: 10px;
+        left: 0px;
         padding: 20px;
         overflow-x: hidden;
         z-index: -10 !important;
@@ -540,10 +540,82 @@ h4 {
     .menu-icon {
         font-size: 18px !important;
         margin-right: 0 !important;
+        margin-left: 5px !important;
     }
 
     .logo img {
-        width: 75px;
+        width: 80px;
+        height: 20px;
+    }
+
+    .user-options {
+        display: none;
+    }
+
+    .micro {
+        display: none;
+    }
+
+    .filter {
+        left: 0px !important;
+        width: 100%;
+        overflow-x: hidden;
+        z-index: -1;
+    }
+
+    .small-menu body {
+        background-color: black !important;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .video {
+        width: 100% !important;
+    }
+
+    .search-box input {
+        width: 170px;
+    }
+
+    .search-btn {
+        width: 50px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .title {
+        width: 230px;
+    }
+
+    .videos-container {
+        position: relative;
+        top: 8rem;
+        width: 93% !important;
+        left: 0px;
+        padding: 20px;
+        overflow-x: hidden;
+        z-index: -10 !important;
+    }
+
+    .side-bar {
+        min-width: 200px;
+        width: 15%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 60px;
+        padding: 10px 10px;
+        z-index: 10;
+    }
+
+    .menu-icon {
+        font-size: 18px !important;
+        margin-right: 5px !important;
+        margin-left: 5px !important;
+    }
+
+    .logo img {
+        width: 80px;
         height: 20px;
     }
 
